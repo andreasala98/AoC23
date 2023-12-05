@@ -38,7 +38,7 @@ def get_new_seed_list(seed_list):
 
 
 
-def part1():
+def part1and2():
 
     with open(path, 'r') as f:
 
@@ -121,4 +121,4 @@ def part1():
 
 if __name__ == '__main__':
 
-    part1()
+    part1and2()
