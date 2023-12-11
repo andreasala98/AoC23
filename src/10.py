@@ -97,8 +97,6 @@ def part1and2():
     next_pos = (start_pos[0], start_pos[1]+1)
     next_node = node_grid[next_pos]
 
-    # print(start_node, end=' ')
-    # print(next_node, end = ' ')
 
     pth = [start_node, next_node]
 
@@ -109,46 +107,11 @@ def part1and2():
         next_node = node_grid[next_pos]
 
         pth.append(next_node)
-        #print(next_node.letter, end=' ')
-
 
     max_distance = (len(pth)-1)//2
-    print()
     print(max_distance)
-
-    # #part 2
-    # ans_2 = 0
-    # inside = []
-
-    # poly = [node.pos for node in pth[:-1]]
-    # p = mpath.Path(poly)
-    # for y in range(len(node_grid)):
-    #     for x in range(len(node_grid[0])):
-    #         if [x, y] in poly:
-    #             continue
-    #         if p.contains_point((x, y)):
-    #             ans_2 += 1
-    #             inside.append((x,y))
-
-    # print(ans_2)
-    # breakpoint()
-
-    # inside = []
-
-    # poly = mpath.Path([list(vert.pos) for vert in pth])
-
-    # for i in range(len(node_grid)):
-    #     for j in range(len(node_grid[0])):
-    #         if poly.contains_point(node_grid[j,i].pos) and node_grid[j,i] not in pth:
-    #             print(f"{node_grid[j,i].pos} inside")
-    #             inside.append(node_grid[j,i].pos)
-    #             out2 += 1
-
-    # print(out2)
-
-
+   
     ct = 0
-    print(path)
 
     for i in range(len(letter_grid)):
         parity = False
